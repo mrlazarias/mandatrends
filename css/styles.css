@@ -1,0 +1,372 @@
+/* Variáveis e Globais */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+body {
+    margin-top: 20px;
+    font-family: 'Roboto';
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;   
+
+}
+
+:root{
+    --gray-texts: #ABABAB;
+    --dark-gray-texts: #585858;
+    --white-texts: #fff;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-texts);
+    padding: 30px 60px;
+
+
+    background: rgb(249,120,73);
+    background: linear-gradient(90deg, rgba(249,120,73,1) 0%, rgba(255,7,78,1) 100%);
+}
+
+header .texts h2,h3 {
+    font-weight: 300;
+    text-align: right;
+
+}
+
+header .texts h2 {
+    max-width: 220px;
+    font-size: 1.5rem;
+}
+
+header .texts h3 {
+    font-size: .9rem;
+}
+
+header .image {
+    position: relative;
+}
+
+header .image::after {
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    left: -140px;
+    top: -30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-image: url('../img/lines.png');
+}
+
+header {
+    position: relative;
+}
+
+header::after {
+    content: "";
+    left:  270px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-image: url('../img/dots.png');
+}
+
+header::before {
+    content: "";
+    left:  40%;
+    bottom: -62px;
+    width: 170px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    background-image: url('../img/group-1.png');
+}
+
+header .texts h2 {
+    position: relative;
+}
+
+header .texts h2::after {
+    content: "";
+    right:  -30px;
+    top: -25px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-image: url('../img/triangle.png');
+}
+
+header .texts h3 {
+    position: relative;
+}
+
+header .texts h3::after{
+    content: "";
+    right:  0px;
+    bottom: -20px;
+    width: 80px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-image: url('../img/zigzag.png');
+}
+
+/* Seções */
+
+.layers {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 60px;
+    display: grid;
+    gap: 40px 20px;
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+
+}
+
+.layer {
+    cursor: pointer;
+    position: relative;
+}
+
+.layer::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -10px;
+    width: 330px;
+    height: 8px;
+    background: linear-gradient(90deg, rgba(255,7,78,1) 0%, rgba(220,73,249,1) 100%);
+}
+
+.layer.layer-2::before {
+    background: linear-gradient(90deg, rgba(7,83,255,1) 0%, rgba(73,195,249,1) 100%);
+}
+
+.layer.layer-3::before {
+    background: linear-gradient(90deg, rgba(7,255,206,1) 0%, rgba(73,249,99,1) 100%);
+}
+
+.layer-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.layers h3 {
+    margin-top: 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.layers p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--dark-gray-texts);
+}
+
+.layers .font {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 0;
+    padding: 20px 0px;
+    color: var(--gray-texts)
+}
+
+.layers img {
+    width: 100%;
+
+    position: relative;
+}
+
+.layer-2 h3, .layer-3 h3 {
+    max-width: 330px;
+}
+
+.layer-2 img, .layer-3 img {
+    height: 280px;
+    width: 600px;
+}
+
+/* Footer */
+
+.content-signs {
+    background-color: #FF6320;
+    padding: 30px;
+    display: flex;
+    color: var(--white-texts)
+}
+
+.content-signs div {
+    display: flex;
+    align-items: center;
+}
+
+.content-signs .name {
+    font-size: 2rem;
+    position: relative;
+}
+
+.content-signs .name::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 78px;
+    width: 9px;
+    height: 9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image:url('../img/vector.png');
+}
+
+footer hr {
+    height: 70px;
+    margin: 0px 30px;
+    box-shadow: none;
+}
+
+.content-signs .styled-font {
+    width: 140px;
+    font-size: 2rem;
+    font-family: 'Edu SA Beginner', cursive;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Copyright */
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-gray-texts);
+    font-size: 1rem;
+    padding: 30px;
+    text-align: center;
+}
+
+.copyright a {
+    color: var(--dark-gray-texts);
+}
+.copyright a:hover {
+    font-weight: 500;
+}
+
+@media (max-width: 790px) {
+
+    header::after {
+        display: none;
+    }
+
+    header::before {
+        left: 30%;
+        height: 160px;
+        bottom: -49px;
+    }
+
+    header .texts h2 {
+        font-size: 1rem;
+    }
+
+    .image img {
+        width: 60%;
+        max-width: unset;
+    }
+
+    .layers {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .layers h3 {
+        font-size: 1.1rem;
+    }
+
+    header .texts h3 {
+        font-size: .8rem;
+    }
+
+    .layer-1 {
+        grid-column-end:unset;
+    }
+
+    .layer-2 img, .layer-3 img {
+        height: unset;
+    }
+
+    .layer::before {
+        width: 150px;
+    }
+
+    .content-signs .styled-font {
+        width: 100px;
+        font-size: 1.4rem;
+    }
+
+    .content-signs .name {
+        font-size: 1.6rem;
+    }
+
+    footer hr {
+    margin: 0px 20px;
+    }
+
+    .copyright {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 550px) {
+    header::before {
+    display: none;
+    }
+}
